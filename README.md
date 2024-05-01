@@ -25,3 +25,4 @@ Pour pouvoir réduire cette fonction de coût, on va adopter une stratégie de m
 - x^(k+1) = arg min_{x ∈ R^N} E(x, y^k)
 - y^(k+1) = arg min_{y ∈ R^2N} E(x^(k+1), y)
 
+## Résultats
