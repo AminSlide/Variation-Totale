@@ -19,6 +19,9 @@ Ainsi, on introduit une variable auxiliaire dans le problème primal et on utili
 
 Pour pouvoir réduire cette fonction de coût, on va adopter une stratégie de minimisation alternée. Autrement dit, à chaque itération, on fixe la valeur de `y` et on minimise par rapport à `x`, puis inversement. Ainsi, selon la méthode de l'ADMM, on obtient le système d’équation suivant :
 
-- \( E(x, y) = \|Hx - z\|^2_2 + \lambda\|y\|_1 + \frac{\mu}{2}\|y - Dx\|^2_2 \)
-- \( x^{k+1} = \arg\min_{x \in \mathbb{R}^N} E(x, y^k) \)
-- \( y^{k+1} = \arg\min_{y \in \mathbb{R}^{2N}} E(x^{k+1}, y) \)
+Pour pouvoir réduire cette fonction de coût, on va adopter une stratégie de minimisation alternée. Autrement dit, à chaque itération, on fixe la valeur de `y` et on minimise par rapport à `x`, puis inversement. Ainsi, selon la méthode de l'ADMM, on obtient le système d’équation suivant :
+
+- E(x, y) = ||Hx - z||^2 + λ||y||_1 + (µ/2)||y - Dx||^2
+- x^(k+1) = arg min_{x ∈ R^N} E(x, y^k)
+- y^(k+1) = arg min_{y ∈ R^2N} E(x^(k+1), y)
+
