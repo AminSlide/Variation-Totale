@@ -26,7 +26,9 @@ Pour pouvoir réduire cette fonction de coût, on va adopter une stratégie de m
 - y^(k+1) = arg min_{y ∈ R^2N} E(x^(k+1), y)
 
 ## Résultats
+On a au départ seulement l'image floutée et bruitée et on arrive après l'algo à obtenir une image défloutée qui ressemble beacoup à l'image initiale.
+
 
 ![image](image/leopard.png)
 
-On a au départ seulement l'image flouté et bruité et on arrive après l'algo à obtenir une image défloutée qui ressemble beacoup à l'image initiale.
+
