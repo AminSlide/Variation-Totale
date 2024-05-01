@@ -12,4 +12,4 @@ En résumé, la méthode de variation totale est efficace pour éliminer le brui
 ## Méthode ADMM
 Dans le cadre de la méthode ADMM, la particularité est que la fonction de cout à minimiser que nous voyons ci-dessous contient un opérateur flou H dans son terme d'attache aux données rendant obsolète la technique du calcul en passant par le Dual.
 
-![image](image/compte_CI(2).jpg)
+![image](image/equation.png)
