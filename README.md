@@ -13,3 +13,12 @@ En résumé, la méthode de variation totale est efficace pour éliminer le brui
 Dans le cadre de la méthode ADMM, la particularité est que la fonction de cout à minimiser que nous voyons ci-dessous contient un opérateur flou H dans son terme d'attache aux données rendant obsolète la technique du calcul en passant par le Dual.
 
 ![image](image/equation.png)
+
+L’Alternated Direction Method of Multipliers consiste à séparer problème difficile à résoudre en deux sous problèmes plus faciles à calculer.
+Ainsi, on introduit une variable auxiliaire dans le problème primal et on utilise des techniques comme l’ADMM pour traiter la contrainte. On pose donc : y = Dx
+
+Pour pouvoir réduire cette fonction de coût, on va adopter une stratégie de minimisation alternée. Autrement dit, à chaque itération, on fixe la valeur de `y` et on minimise par rapport à `x`, puis inversement. Ainsi, selon la méthode de l'ADMM, on obtient le système d’équation suivant :
+
+- \( E(x, y) = \|Hx - z\|^2_2 + \lambda\|y\|_1 + \frac{\mu}{2}\|y - Dx\|^2_2 \)
+- \( x^{k+1} = \arg\min_{x \in \mathbb{R}^N} E(x, y^k) \)
+- \( y^{k+1} = \arg\min_{y \in \mathbb{R}^{2N}} E(x^{k+1}, y) \)
